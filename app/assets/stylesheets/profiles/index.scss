@@ -1,0 +1,57 @@
+.title-contents {
+  height: 300px;
+  background-image: image-url('model-image.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 15vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.service-title {
+  font-size: 4vh;
+}
+
+.user-profiles{
+  margin: 20px 20vw 0px;
+  height: 200px;
+  width: 60vw;
+  background: #c6e4ff;
+  border: black solid 1px;
+  border-bottom: solid 6px #aac5de;
+  border-radius: 9px;
+  display: flex;
+}
+
+.profile-image{
+  border-radius: 50%;
+}
+
+.icon-img{
+  margin: 10px;
+  width: 50%;
+  border: black solid 1px;
+  border-radius: 50%;
+}
+
+.profile-details{
+  font-size: larger;
+  width: 100%;
+}
+
+.user-name{
+  height: 33%;
+}
+
+.user-age{
+  height: 33%;
+}
+
+.user-sex{
+  height: 33%;
+}

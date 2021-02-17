@@ -52,7 +52,6 @@ RopeWay
 | age                | integer    | null: false,                   |
 | residence_id       | integer    | null: false,                   |
 | rope_patron_id     | integer    | null: false,                   |
-| spending_money     | integer    | null: false,                   |
 #### Association
 - belongs_to :user
 - has_many :likes

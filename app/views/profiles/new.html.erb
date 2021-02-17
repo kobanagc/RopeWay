@@ -1,0 +1,60 @@
+<%= render "shared/header" %>
+<div class="profile-new-contents">
+  <div class="profile-new-main">
+    <h2 class="profile-new-title">プロフィール作成</h2>
+    <%= form_with model: @profile, url: profiles_path, local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        画像
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"profile-image" %>
+      </div>
+    </div>
+    <div class="new-profile">
+      <div class="self-pr">
+        <div class="weight-bold-text">
+          自己紹介文
+        </div>
+        <%= f.text_area :self_pr, class:"pr-text", id:"pr-info", placeholder:"自己紹介文（1,000文字まで）はじめまして！よろしく願いします！" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+
+    <div class="profile-detail">
+      <div class="form">
+        <div class="weight-bold-text">
+          性別
+        </div>
+        <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:"select-box", id:"profile-sex"}) %>
+        <div class="weight-bold-text">
+          年齢
+        </div>
+        <%= f.text_field :age, class:"age-input", id:"age" %><span>歳</span>
+        <div class="weight-bold-text">
+          都道府県
+        </div>
+        <%= f.collection_select(:residence_id, Residence.all, :id, :name, {}, {class:"select-box", id:"profile-residence"}) %>
+        <div class="weight-bold-text">
+          属性
+        </div>
+        <%= f.collection_select(:rope_patron_id, RopePatron.all, :id, :name, {}, {class:"select-box", id:"profile-rope-patron"}) %>
+      </div>
+    </div>
+
+    <%# 下部ボタン %>
+    <div class="profile-btn-contents">
+      <%= f.submit "登録する" ,class:"new-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+
+</div>
+<%= render "shared/footer" %>

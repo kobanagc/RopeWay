@@ -1,0 +1,29 @@
+<%= render "shared/header" %>
+<div class="title-contents">
+    <h2 class='service-title'>
+      理想のパートナー探し
+    </h2>
+</div>
+<div class="main-contents">
+  <% @profiles.each do |profile| %>
+    <%= link_to "/profiles/#{profile.id}" do %>
+      <div class="user-profiles">
+        <div class="profile-image">
+          <%= image_tag profile.image, class: "icon-img" %>
+        </div>
+        <div class="profile-details">
+          <div class="user-name">
+            名前：<%= profile.user.name %>
+          </div>
+          <div class="user-sex">
+            性別：<%= profile.sex.name %>
+          </div>
+          <div class="user-age">
+            年齢：<%= profile.age %>歳
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<%= render "shared/footer" %>
