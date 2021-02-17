@@ -1,0 +1,13 @@
+<%= render "shared/header" %>
+<%= image_tag @profile.image, class: "item-img" %>
+名前：<%= @profile.user.name %>
+性別：<%= @profile.sex.name %>
+年齢：<%= @profile.age %>歳
+都道府県：<%= @profile.residence.name %>
+属性：<%= @profile.rope_patron.name %>
+自己紹介<%= @profile.self_pr %>
+<% if current_user.id == @profile.user_id %>
+  <%= link_to "プロフィール登録", new_profile_path %>
+  <%= link_to "プロフィール編集", edit_profile_path %>
+<% end %>
+<%= render "shared/footer" %>
