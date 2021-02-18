@@ -9,11 +9,11 @@ https://rope-way.herokuapp.com/
 
 # テスト用アカウント
 ### Basic認証
--ID:kbno
--pass:8878 
+- ID:kbno
+- pass:8878 
 ### テストアカウント
--ID:sample@sample.com
--pass:sample
+- ID:sample@sample.com
+- pass:sample
 
 # 利用方法
 1. ユーザー登録
@@ -97,12 +97,12 @@ https://rope-way.herokuapp.com/
 3. rails db:migrate
 4. rails s
 
-- パッケージ
-devise
-pry-rails
-mini_magick
-image_processing '~> 1.2'
-active_hash
+### パッケージ
+- devise
+- pry-rails
+- mini_magick
+- image_processing '~> 1.2'
+- active_hash
 
-- バージョン
-rails '~> 6.0.0'
+### バージョン
+- rails '~> 6.0.0'
