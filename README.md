@@ -1,10 +1,19 @@
 # アプリ名
 RopeWay
+
 # 概要
 ヒモとパトロンのマッチングアプリ
+
 # URL
+https://rope-way.herokuapp.com/
 
 # テスト用アカウント
+### Basic認証
+-ID:kbno
+-pass:8878 
+### テストアカウント
+-ID:sample@sample.com
+-pass:sample
 
 # 利用方法
 1. ユーザー登録
@@ -26,11 +35,16 @@ RopeWay
 - タグ
 
 # 実装した機能
+- ユーザー管理
+- プロフィール
 
 # 実装予定の機能
+- いいね
+- トークルーム
+- 検索
+- タグ
 
 # データベース設計
-
 ### users テーブル
 | Column             | Type    | Options                   |
 | ------------------ | --------| ------------------------- |
@@ -78,3 +92,17 @@ RopeWay
 - belongs_to :user
 
 # ローカルでの動作方法
+1. コマンドでbundle installを実行し、gemのインストール
+2. rails db:create
+3. rails db:migrate
+4. rails s
+
+- パッケージ
+devise
+pry-rails
+mini_magick
+image_processing '~> 1.2'
+active_hash
+
+- バージョン
+rails '~> 6.0.0'
