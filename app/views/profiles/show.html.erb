@@ -6,6 +6,16 @@
 都道府県：<%= @profile.residence.name %>
 属性：<%= @profile.rope_patron.name %>
 自己紹介<%= @profile.self_pr %>
+<% if Like.find_by(user_id:current_user.id,profile_id:@profile.id)%>
+  <%= link_to("/likes/#{@profile.id}/destroy", method: :post) do %>
+    <span class="fa fa-heart like-btn-unlike"></span>
+  <% end %>
+<% else %>
+  <%= link_to("likes/#{@profile.id}/create", method: :post) do %>
+    <span class="fa fa-heart like-btn"></span>
+  <% end %>
+<% end %>
+<%= @likes_count %>
 <% if current_user.id == @profile.user_id %>
   <%= link_to "プロフィール登録", new_profile_path %>
   <%= link_to "プロフィール編集", edit_profile_path %>

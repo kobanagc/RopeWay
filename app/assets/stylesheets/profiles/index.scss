@@ -1,6 +1,6 @@
 .title-contents {
   height: 300px;
-  background-image: image-url('model-image.png');
+  background-image: image-url('model-image1.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -45,13 +45,17 @@
 }
 
 .user-name{
-  height: 33%;
+  height: 25%;
 }
 
 .user-age{
-  height: 33%;
+  height: 25%;
 }
 
 .user-sex{
-  height: 33%;
+  height: 25%;
+}
+
+.user-likes{
+  height: 25%;
 }

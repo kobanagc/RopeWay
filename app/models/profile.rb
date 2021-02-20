@@ -1,5 +1,6 @@
 class Profile < ApplicationRecord
   belongs_to :user
+  has_many :likes
   has_one_attached :image
 
   with_options presence: true do
