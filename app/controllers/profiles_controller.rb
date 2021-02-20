@@ -1,10 +1,12 @@
 class ProfilesController < ApplicationController
   def index
     @profiles = Profile.includes(:user).order(created_at: 'DESC')
+    # @likes_count = Like.where(profile_id: profile.id).count
   end
 
   def show
     @profile = Profile.find(params[:id])
+    @likes_count = Like.where(profile_id: @profile.id).count
   end
 
   def new
