@@ -1,4 +1,6 @@
 class ProfilesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @profiles = Profile.includes(:user).order(created_at: 'DESC')
     # @likes_count = Like.where(profile_id: profile.id).count
