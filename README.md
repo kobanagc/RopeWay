@@ -7,10 +7,7 @@ Matching App between a patron and people who financially depends on others
 # URL
 
 
-# Test
-### Basic authentication
-- ID:kbno
-- pass:8878 
+# Test 
 ### Account for test
 - ID:sample@sample.com
 - pass:sample
