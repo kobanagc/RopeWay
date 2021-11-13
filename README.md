@@ -34,7 +34,7 @@ Matching App between a patron and people who financially depends on others
 | encrypted_password | string  | null: false               |
 | phone              | string  | null: false, unique: true | 
 | self_pr            | text    |                           |
-| sex                | integer | null: false               |
+| sex_id             | integer | null: false               |
 | age                | integer | null: false               |
 | residence_id       | integer | null: false               |
 | rope_patron_id     | integer | null: false               |
