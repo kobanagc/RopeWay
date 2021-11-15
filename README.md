@@ -86,7 +86,6 @@ Matching App between a patron and people who financially depends on others
 - mini_magick
 - image_processing '~> 1.2'
 - active_hash
-- Tailwind CSS
 
 ### Version
 - rails '~> 6.0.3'
